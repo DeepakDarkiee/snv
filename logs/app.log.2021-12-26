@@ -1,0 +1,7 @@
+2021-12-26 17:44:36,302 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["name 'client' is not defined"]} None
+2021-12-26 17:44:36,302 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["name 'client' is not defined"]} None
+2021-12-26 18:06:31,963 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["name 'Validator' is not defined"]} None
+2021-12-26 18:06:31,967 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["name 'Validator' is not defined"]} None
+2021-12-26 18:06:52,774 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["name 'Validator' is not defined"]} None
+2021-12-26 18:06:52,775 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["name 'Validator' is not defined"]} None
+2021-12-26 18:11:03,504 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None

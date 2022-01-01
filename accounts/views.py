@@ -15,7 +15,7 @@ from .utils import create_user,user_message_send
 logger = app_logger.createLogger("app")
 
 # Create your views here.
-from accounts.serializers import RegisterSerializer,UserSendOptSerializer
+from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer
 
 
 class SendUserOtp(generics.GenericAPIView):
@@ -88,3 +88,30 @@ class RegisterView(generics.GenericAPIView):
         #         status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
         #     )
 
+
+
+class LoginAPIView(generics.GenericAPIView):
+    serializer_class = LoginSerializer
+
+    def post(self, request):
+        try:
+            data = request.data
+            serializer = self.serializer_class(data=data)
+            if serializer.is_valid():
+                message = "User Successfully Login"
+                return rest_utils.build_response(
+                    status.HTTP_200_OK, message, data=serializer.data, errors=None
+                )
+            else:
+                return rest_utils.build_response(
+                    status.HTTP_400_BAD_REQUEST,
+                    rest_utils.HTTP_REST_MESSAGES["400"],
+                    data=None,
+                    errors=serializer.errors,
+                )
+
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )

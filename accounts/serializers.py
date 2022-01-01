@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from accounts.models import User
 from accounts.utils import verify_contact_otp
+from snv.common.validations import Validator
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -58,3 +59,41 @@ class UserSendOptSerializer(serializers.Serializer):
     #     if not result:
     #         raise serializers.ValidationError(message)
     #     return data
+    
+class LoginSerializer(serializers.Serializer):
+    contact = serializers.CharField(
+        max_length=68, min_length=5, write_only=True, required=False)
+    otp = serializers.IntegerField(write_only=True)
+
+    tokens = serializers.CharField(read_only=True)
+    refresh_token = serializers.CharField(read_only=True)
+
+    class Meta:
+        model = User
+        fields = ["tokens", "refresh_token", "contact","otp"]
+
+    def validate(self, attrs):
+        contact = attrs.get("contact", None)
+        otp = attrs.get("otp", None)
+        print(contact,otp)
+        validated_data = {'otp':otp,'contact':contact}
+        otp_result, otp_message, data = verify_contact_otp(validated_data)
+        if not otp_result:
+            raise serializers.ValidationError(otp_message)
+            return {
+                "message": otp_message,
+            }
+        else:
+            result, message, user = Validator.is_valid_user(contact)
+            if not result:
+                raise serializers.ValidationError(message)
+
+            return {
+                "contact": user.contact,
+                "tokens": user.tokens().get("access"),
+                "refresh_token": user.tokens().get("refresh"),
+                "password": user.password,
+                "message": otp_message,
+            }
+        # else:
+        #     return is_verify

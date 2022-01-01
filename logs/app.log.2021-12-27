@@ -1,0 +1,6 @@
+2021-12-27 18:11:35,188 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-27 18:12:07,535 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User created successfully None None
+2021-12-27 19:01:26,637 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-27 19:09:14,782 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-27 19:09:42,337 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["local variable 'user' referenced before assignment"]} None
+2021-12-27 19:09:42,338 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["local variable 'user' referenced before assignment"]} None

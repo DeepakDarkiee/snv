@@ -1,0 +1,16 @@
+2021-12-28 17:20:08,112 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-28 17:21:00,300 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User created successfully None None
+2021-12-28 17:22:03,699 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-28 17:24:27,425 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-28 17:27:55,266 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:27:55,266 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:27:59,180 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:27:59,180 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:28:33,831 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-28 17:29:08,779 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:29:08,779 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:29:20,653 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:29:20,653 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:34:08,266 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2021-12-28 17:34:34,293 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None
+2021-12-28 17:34:34,293 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'contact': [ErrorDetail(string='user with this contact already exists.', code='unique')]} None

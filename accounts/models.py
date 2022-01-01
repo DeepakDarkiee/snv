@@ -1,30 +1,27 @@
-from django.db import models
-
-# Create your models here.
 from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
                                         PermissionsMixin)
 from django.db import models
 from rest_framework_simplejwt.tokens import RefreshToken
 
 # Create your models here.
+
+
 class UserManager(BaseUserManager):
     def create_user(
         self,
-        email,
-        username=None,
+        username,
         contact=None,
         first_name=None,
-        last_name = None,
-        auth_provider="contact",
+        auth_provider="email",
         is_verified=False,
         password=None,
+        email=None,
     ):
-        if email is None:
-            raise TypeError("User should have a email")
+        if username is None:
+            raise TypeError("User should have a username")
         user = self.model(
             username=username,
             first_name=first_name,
-            last_name = last_name,
             is_verified=is_verified,
             auth_provider=auth_provider,
             contact=contact,
@@ -33,15 +30,13 @@ class UserManager(BaseUserManager):
         user.set_password(password)
         user.save()
         return user
-    
+
     def create_superuser(
         self,
+        username,
         contact,
-        email,
-        username=None,
         first_name=None,
-        last_name=None,
-        auth_provider="contact",
+        auth_provider="email",
         is_verified=True,
         password=None,
     ):
@@ -49,11 +44,9 @@ class UserManager(BaseUserManager):
             raise TypeError("Password should not be None")
 
         user = self.create_user(
-            email,
             username,
             contact,
-            first_name=first_name,
-            last_name=last_name,
+            first_name=username,
             auth_provider="email",
             is_verified=True,
             password=password,
@@ -64,30 +57,32 @@ class UserManager(BaseUserManager):
         return user
 
 
+AUTH_PROVIDERS = {"google": "google", "email": "email"}
 
 
 class User(AbstractBaseUser, PermissionsMixin):
-    username = models.CharField(max_length=255, db_index=True,null=True,blank=True)
-    first_name = models.CharField(max_length=255,null=True,blank=True)
-    last_name = models.CharField(max_length=255,null=True,blank=True)
-    email = models.EmailField(max_length=255, default="", null=True, blank=True,db_index=True)
-    contact = models.CharField(max_length=15, null=True, blank=True,unique=True)
-    profile_pic = models.ImageField(blank=True, upload_to="profile_pics")
+    username = models.CharField(max_length=255, unique=True, db_index=True)
+    first_name = models.CharField(max_length=255)
+    last_name = models.CharField(max_length=255)
+    email = models.EmailField(max_length=255, null=True, blank=True)
+    contact = models.CharField(max_length=15, unique=True)
     is_verified = models.BooleanField(default=False)
-    auth_provider = models.CharField(
-        max_length=255, blank=False, null=False, default="contact"
-    )
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    profile_pic = models.ImageField(blank=True, upload_to="profile_pics")
+    auth_provider = models.CharField(
+        max_length=255, blank=False, null=False, default="contact"
+    )
 
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["contact"]
+    USERNAME_FIELD = "contact"
+    REQUIRED_FIELDS = ['username']
+
     objects = UserManager()
 
     def __str__(self):
-        return str(self.contact)
+        return self.username
 
     def tokens(self):
         refresh = RefreshToken.for_user(self)
