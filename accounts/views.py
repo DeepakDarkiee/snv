@@ -12,10 +12,11 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from snv.common import app_logger, rest_utils
 from .utils import create_user,user_message_send
+from accounts.models import User
 logger = app_logger.createLogger("app")
 
 # Create your views here.
-from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer
+from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer
 
 
 class SendUserOtp(generics.GenericAPIView):
@@ -54,12 +55,12 @@ class RegisterView(generics.GenericAPIView):
 
     def post(self, request):
 
-        # try:
+        try:
             data = request.data
             serializer = self.serializer_class(data=data)
 
             if serializer.is_valid():
-                user = serializer.save(username=data.get("contact"), is_verified=True)
+                user = serializer.save(contact=data.get("contact"), is_verified=True)
                 result, message, response_data = create_user(user, data)
                 if result:
                     data = serializer.data
@@ -79,14 +80,11 @@ class RegisterView(generics.GenericAPIView):
                     data=None,
                     errors=serializer.errors,
                 )
-            # logger.debug('Log whatever you want')
-            # logger.error("Test!!")
-            # logger.warning('Homepage was accessed at '+str(datetime.datetime.now())+' hours!')
-        # except Exception as e:
-        #     message = rest_utils.HTTP_REST_MESSAGES["500"]
-        #     return rest_utils.build_response(
-        #         status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
-        #     )
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )
 
 
 
@@ -101,6 +99,40 @@ class LoginAPIView(generics.GenericAPIView):
                 message = "User Successfully Login"
                 return rest_utils.build_response(
                     status.HTTP_200_OK, message, data=serializer.data, errors=None
+                )
+            else:
+                return rest_utils.build_response(
+                    status.HTTP_400_BAD_REQUEST,
+                    rest_utils.HTTP_REST_MESSAGES["400"],
+                    data=None,
+                    errors=serializer.errors,
+                )
+
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )
+
+
+class UserProfileUpdate(generics.GenericAPIView):
+
+    permission_classes = (IsAuthenticated,)
+    serializer_class = UpdateUserSerializer
+    parser_classes = (MultiPartParser,)
+
+    @swagger_serializer_method(serializer_or_field=UpdateUserSerializer)
+    def put(self, request, pk, format=None):
+        try:
+            user = User.objects.get(pk=pk)
+            serializer = self.serializer_class(request.user, data=self.request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return rest_utils.build_response(
+                    status.HTTP_200_OK,
+                    "User Profile Updated",
+                    data=serializer.data,
+                    errors=None,
                 )
             else:
                 return rest_utils.build_response(

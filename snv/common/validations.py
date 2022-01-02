@@ -42,3 +42,13 @@ class Validator:
       except Exception as e:
           message = f"{e}"
       return result, message
+  
+  @staticmethod
+  def is_valid_contact_number(number):
+        result, message = False, "This contact Number Already Exits"
+        try:
+            if not User.objects.filter(contact=number).exists():
+                result, message = True, "OK"
+        except Exception as e:
+            message = f"{e}"
+        return result, message
