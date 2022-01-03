@@ -1,0 +1,39 @@
+2022-01-02 16:45:44,759 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-02 16:47:45,251 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-02 16:47:57,356 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User created successfully None None
+2022-01-02 16:48:16,071 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-02 16:48:36,957 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Successfully Login None None
+2022-01-02 16:48:46,074 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 16:48:46,074 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 16:51:48,861 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 16:51:48,861 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 16:53:06,370 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:53:06,371 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:54:09,238 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:54:09,238 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:54:16,507 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 16:54:16,508 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 16:54:25,708 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:54:25,709 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:57:36,313 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 16:57:36,313 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:00:19,155 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:00:19,156 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:01:26,608 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:01:26,609 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:02:09,697 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:02:09,698 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:17:56,043 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='This contact Number Already Exits', code='invalid')]} None
+2022-01-02 17:17:56,043 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='This contact Number Already Exits', code='invalid')]} None
+2022-01-02 17:18:28,482 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:18:28,482 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["[ErrorDetail(string='Invalid OTP', code='invalid')]"]} None
+2022-01-02 17:22:20,762 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["'int' object has no attribute 'get'"]} None
+2022-01-02 17:22:20,762 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["'int' object has no attribute 'get'"]} None
+2022-01-02 17:23:03,819 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["name 'validated_data' is not defined"]} None
+2022-01-02 17:23:03,819 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["name 'validated_data' is not defined"]} None
+2022-01-02 17:25:17,048 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 17:25:17,049 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-02 17:30:05,833 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'username': [ErrorDetail(string='user with this username already exists.', code='unique')]} None
+2022-01-02 17:30:05,833 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'username': [ErrorDetail(string='user with this username already exists.', code='unique')]} None
+2022-01-02 17:30:18,259 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["'AnonymousUser' object has no attribute '_meta'"]} None
+2022-01-02 17:30:18,259 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["'AnonymousUser' object has no attribute '_meta'"]} None

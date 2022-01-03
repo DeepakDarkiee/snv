@@ -6,18 +6,18 @@ from snv.common.validations import Validator
 
 class RegisterSerializer(serializers.ModelSerializer):
     contact = serializers.CharField(
-        max_length=68, min_length=5, write_only=True, required=False
+        max_length=68, min_length=5, write_only=True, required=True
     )
     otp = serializers.IntegerField(write_only=True)
 
-    def create(self, validated_data):
-        # result, message, data = verify_contact_otp(validated_data)
-        # if not result:
-        #     raise serializers.ValidationError(message)
+    # def create(self, validated_data):
+    #     result, message, data = verify_contact_otp(validated_data)
+    #     if not result:
+    #         raise serializers.ValidationError(message)
             
 
-        # data = validated_data.pop("otp", None)
-        return super().create(validated_data)
+    #     data = validated_data.pop("otp", None)
+    #     return super().create(validated_data)
 
     class Meta:
         model = User
@@ -71,7 +71,6 @@ class LoginSerializer(serializers.Serializer):
     def validate(self, attrs):
         contact = attrs.get("contact", None)
         otp = attrs.get("otp", None)
-        print(contact,otp)
         validated_data = {'otp':otp,'contact':contact}
         otp_result, otp_message, data = verify_contact_otp(validated_data)
         if not otp_result:

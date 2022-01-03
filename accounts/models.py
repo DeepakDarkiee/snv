@@ -71,6 +71,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    otp = models.IntegerField()
     profile_pic = models.ImageField(blank=True, upload_to="profile_pics")
     auth_provider = models.CharField(
         max_length=255, blank=False, null=False, default="contact"

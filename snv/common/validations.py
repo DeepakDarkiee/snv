@@ -10,7 +10,8 @@ class Validator:
   @staticmethod
   def is_valid_user(contact):
         try:
-            user = ContactAuthBackend.authenticate(contact=8871829423)
+            user = ContactAuthBackend.authenticate(contact=contact)
+            print(user)
             return True, "Ok", user
             
             if not user:
