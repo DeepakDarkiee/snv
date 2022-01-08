@@ -16,7 +16,7 @@ from accounts.models import User
 logger = app_logger.createLogger("app")
 
 # Create your views here.
-from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer
+from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer,DeactivateUserSerializer
 
 
 class SendUserOtp(generics.GenericAPIView):
@@ -122,15 +122,47 @@ class UserProfileUpdate(generics.GenericAPIView):
     parser_classes = (MultiPartParser,)
 
     @swagger_serializer_method(serializer_or_field=UpdateUserSerializer)
-    def put(self, request, pk, format=None):
+    def put(self, request, format=None):
         try:
-            user = User.objects.get(pk=pk)
+            # user = User.objects.get(pk=pk)
             serializer = self.serializer_class(request.user, data=self.request.data)
             if serializer.is_valid():
                 serializer.save()
                 return rest_utils.build_response(
                     status.HTTP_200_OK,
                     "User Profile Updated",
+                    data=serializer.data,
+                    errors=None,
+                )
+            else:
+                return rest_utils.build_response(
+                    status.HTTP_400_BAD_REQUEST,
+                    rest_utils.HTTP_REST_MESSAGES["400"],
+                    data=None,
+                    errors=serializer.errors,
+                )
+
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )
+
+
+class DeactivateUserAccount(generics.GenericAPIView):
+
+    permission_classes = (IsAuthenticated,)
+    serializer_class = DeactivateUserSerializer
+
+    @swagger_serializer_method(serializer_or_field=DeactivateUserSerializer)
+    def put(self, request, format=None):
+        try:
+            serializer = self.serializer_class(request.user, data=self.request.data)
+            if serializer.is_valid():
+                serializer.save()
+                return rest_utils.build_response(
+                    status.HTTP_200_OK,
+                    "User Deactivated",
                     data=serializer.data,
                     errors=None,
                 )

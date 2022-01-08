@@ -111,4 +111,10 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             "profile_pic",
         )
 
+class DeactivateUserSerializer(serializers.ModelSerializer):
 
+    class Meta:
+        model = User
+        fields = (
+            "is_active",
+        )
