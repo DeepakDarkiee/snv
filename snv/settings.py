@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 from datetime import timedelta
 from pathlib import Path
 import os
-
+from django.utils import timezone
 from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -128,7 +128,9 @@ USE_I18N = True
 
 USE_TZ = True
 
-
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timezone.timedelta(days=30),
+}
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
