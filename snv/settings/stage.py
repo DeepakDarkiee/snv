@@ -10,6 +10,28 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.postgresql",
+#         "NAME": config("DB_HOST_NAME"),
+#         "USER": "postgres",
+#         "PASSWORD": config("DB_HOST_PASSWORD"),
+#         "HOST": "postgres",
+#         "PORT": 5431,
+#     }
+# }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": os.environ.get("SQL_ENGINE", "django.db.backends.sqlite3"),
+#         "NAME": os.environ.get("SQL_DATABASE", BASE_DIR / "db.sqlite3"),
+#         "USER": os.environ.get("SQL_USER", "user"),
+#         "PASSWORD": os.environ.get("SQL_PASSWORD", "password"),
+#         "HOST": os.environ.get("SQL_HOST", "localhost"),
+#         "PORT": os.environ.get("SQL_PORT", "5432"),
+#     }
+# }
+
 import sentry_sdk
 from sentry_sdk.integrations.django import DjangoIntegration
 
