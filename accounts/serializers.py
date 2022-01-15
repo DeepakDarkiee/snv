@@ -25,7 +25,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate(self, data):
         validated_data={'otp':data['otp'],'contact':data['contact']}
-        result, message, data = verify_contact_otp(validated_data)
+        result, message ,data_otp = verify_contact_otp(validated_data)
         if not result:
             raise serializers.ValidationError(message)
 

@@ -31,12 +31,9 @@ def verify_contact_otp(request_data):
     result, message, data = False, "Failed", None
     phone = request_data.get("contact", None)
     otp = request_data.get("otp", None)
-    user = User.objects.get(contact=phone)
     verify = user_check_otp(phone, otp)
     print(verify)
     if verify:
-        user.is_verified = True
-        user.save()
         result, message, data = True, "Successfully Verified", None
     else:
         result, message, data = False, "Invalid OTP", None
