@@ -16,8 +16,8 @@ DATABASES = {
 #         "NAME": config("DB_HOST_NAME"),
 #         "USER": "postgres",
 #         "PASSWORD": config("DB_HOST_PASSWORD"),
-#         "HOST": "postgres",
-#         "PORT": 5431,
+#         "HOST": "db",
+#         "PORT": 5432,
 #     }
 # }
 
