@@ -1,23 +1,23 @@
-import jwt
-from django.conf import settings
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils.encoding import DjangoUnicodeDecodeError, smart_str
-from django.utils.http import urlsafe_base64_decode
-from drf_yasg import openapi
-from drf_yasg.utils import swagger_auto_schema, swagger_serializer_method
+from drf_yasg.utils import swagger_serializer_method
 from rest_framework import generics, status
-from rest_framework.decorators import api_view
 from rest_framework.parsers import MultiPartParser
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
 from snv.common import app_logger, rest_utils
-from .utils import create_user,user_message_send
+
 from accounts.models import User
 from accounts.permissions import IsLogin
+from accounts.serializers import (
+    LoginSerializer,
+    RegisterSerializer,
+    UpdateUserSerializer,
+    UserSendOptSerializer,
+)
+
+from .utils import create_user, user_message_send
+
 logger = app_logger.createLogger("app")
 
 # Create your views here.
-from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer
 
 
 class SendUserOtp(generics.GenericAPIView):
@@ -51,6 +51,8 @@ class SendUserOtp(generics.GenericAPIView):
             return rest_utils.build_response(
                 status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
             )
+
+
 class RegisterView(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
@@ -86,7 +88,6 @@ class RegisterView(generics.GenericAPIView):
             return rest_utils.build_response(
                 status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
             )
-
 
 
 class LoginAPIView(generics.GenericAPIView):
@@ -156,7 +157,7 @@ class DeactivateUserAccount(generics.GenericAPIView):
 
     def put(self, request, format=None):
         try:
-            user=User.objects.get(id=request.user.id)
+            user = User.objects.get(id=request.user.id)
             user.is_active = False
             user.save()
             return rest_utils.build_response(

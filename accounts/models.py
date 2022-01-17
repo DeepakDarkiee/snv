@@ -1,5 +1,8 @@
-from django.contrib.auth.models import (AbstractBaseUser, BaseUserManager,
-                                        PermissionsMixin)
+from django.contrib.auth.models import (
+    AbstractBaseUser,
+    BaseUserManager,
+    PermissionsMixin,
+)
 from django.db import models
 from rest_framework_simplejwt.tokens import RefreshToken
 
@@ -71,14 +74,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_staff = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    otp = models.IntegerField()
+    otp = models.IntegerField(null=True, blank=True)
     profile_pic = models.ImageField(blank=True, upload_to="profile_pics")
     auth_provider = models.CharField(
         max_length=255, blank=False, null=False, default="contact"
     )
 
     USERNAME_FIELD = "contact"
-    REQUIRED_FIELDS = ['username']
+    REQUIRED_FIELDS = ["username"]
 
     objects = UserManager()
 
