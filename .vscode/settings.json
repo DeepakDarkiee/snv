@@ -1,3 +1,6 @@
 {
-  "BracketHighlighter.enableExtension": false
+  "BracketHighlighter.enableExtension": false,
+  "python.formatting.autopep8Path": "/home/deep/.pyenv/shims/flake8",
+  "python.formatting.provider": "black",
+  "python.linting.enabled": false
 }

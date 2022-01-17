@@ -1,11 +1,13 @@
-from accounts.models import User
 from django.conf import settings
-from django.contrib.auth import authenticate
+# from django.contrib.auth import authenticate
 from twilio.base.exceptions import TwilioRestException
 from twilio.rest import Client
 
+# from accounts.models import User
+
 client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
 verify = client.verify.services(settings.TWILIO_VERIFY_SERVICE_SID)
+
 
 def create_user(user, request_data):
     result, message, data = False, "Failed", None
@@ -18,14 +20,16 @@ def create_user(user, request_data):
         result, message, data = False, str(e), None
     return result, message, data
 
+
 def user_check_otp(phone, code):
     try:
         verify_status = client.verify.services(
             settings.TWILIO_VERIFY_SERVICE_SID
         ).verification_checks.create(to="+91" + phone, code=code)
         return verify_status.status == "approved"
-    except TwilioRestException as e:
+    except TwilioRestException:
         return False
+
 
 def verify_contact_otp(request_data):
     result, message, data = False, "Failed", None
@@ -38,8 +42,8 @@ def verify_contact_otp(request_data):
     else:
         result, message, data = False, "Invalid OTP", None
     return result, message, data
-  
-  
+
+
 def user_message_send(phone):
     try:
         client.verify.services(settings.TWILIO_VERIFY_SERVICE_SID).verifications.create(
