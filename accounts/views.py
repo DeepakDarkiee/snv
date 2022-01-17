@@ -13,10 +13,11 @@ from rest_framework.response import Response
 from snv.common import app_logger, rest_utils
 from .utils import create_user,user_message_send
 from accounts.models import User
+from accounts.permissions import IsLogin
 logger = app_logger.createLogger("app")
 
 # Create your views here.
-from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer,DeactivateUserSerializer
+from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer
 
 
 class SendUserOtp(generics.GenericAPIView):
@@ -151,28 +152,25 @@ class UserProfileUpdate(generics.GenericAPIView):
 
 class DeactivateUserAccount(generics.GenericAPIView):
 
-    permission_classes = (IsAuthenticated,)
-    serializer_class = DeactivateUserSerializer
+    permission_classes = (IsLogin,)
 
-    @swagger_serializer_method(serializer_or_field=DeactivateUserSerializer)
     def put(self, request, format=None):
         try:
-            serializer = self.serializer_class(request.user, data=self.request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return rest_utils.build_response(
-                    status.HTTP_200_OK,
-                    "User Deactivated",
-                    data=serializer.data,
-                    errors=None,
-                )
-            else:
-                return rest_utils.build_response(
-                    status.HTTP_400_BAD_REQUEST,
-                    rest_utils.HTTP_REST_MESSAGES["400"],
-                    data=None,
-                    errors=serializer.errors,
-                )
+            user=User.objects.get(id=request.user.id)
+            user.is_active = False
+            user.save()
+            return rest_utils.build_response(
+                status.HTTP_200_OK,
+                "User Deactivated",
+                errors=None,
+            )
+            # else:
+            #     return rest_utils.build_response(
+            #         status.HTTP_400_BAD_REQUEST,
+            #         rest_utils.HTTP_REST_MESSAGES["400"],
+            #         data=None,
+            #         errors=serializer.errors,
+            #     )
 
         except Exception as e:
             message = rest_utils.HTTP_REST_MESSAGES["500"]

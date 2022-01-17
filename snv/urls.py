@@ -20,6 +20,10 @@ from django.urls import path,include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from django.urls import path
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
 
 schema_view = get_schema_view(
    openapi.Info(
@@ -40,6 +44,7 @@ schema_view = get_schema_view(
 urlpatterns = (
     [
     path('admin/', admin.site.urls),
+    path('sentry-debug/', trigger_error),
     path('api/accounts/',include("accounts.urls")),    
 ]
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
