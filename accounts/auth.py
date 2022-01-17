@@ -1,10 +1,9 @@
-from django.contrib.auth.backends import ModelBackend
 from accounts.models import User
 
-class ContactAuthBackend:
-    """Log in to Django without providing a password.
 
-    """
+class ContactAuthBackend:
+    """Log in to Django without providing a password."""
+
     def authenticate(contact=None):
         try:
             return User.objects.get(contact=contact)

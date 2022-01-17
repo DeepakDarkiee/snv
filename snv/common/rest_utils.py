@@ -1,6 +1,5 @@
 from django.utils.translation import gettext as _
 from rest_framework.response import Response
-
 from snv.common import app_logger
 
 logger = app_logger.createLogger("app")
