@@ -1,5 +1,7 @@
 from django.urls import path
 
+from verify.views import CreateSession
+
 urlpatterns = [
-    # path("register/", RegisterView.as_view(), name="register")
+    path("create_session/", CreateSession.as_view(), name="create_session"),
 ]

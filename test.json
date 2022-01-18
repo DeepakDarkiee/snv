@@ -1,0 +1,12 @@
+{
+  "firstName": "John",
+  "lastName": "Smith",
+  "idNumber": "123456789",
+  "gender": "string",
+  "dateOfBirth": "string",
+  "number": "B01234567",
+  "country": "EE",
+  "type": "PASSPORT",
+  "vendorData": "11111111",
+  "timestamp": "2022-01-18T18:52:45.021Z"
+}

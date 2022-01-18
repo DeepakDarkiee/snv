@@ -17,7 +17,7 @@ payload = json.dumps({
           'type': 'PASSPORT',
           'country': 'EE'
         },
-        'vendorData': '11111111',
+        'vendorData': '1111',
         'features': [
           'selfid'
         ],

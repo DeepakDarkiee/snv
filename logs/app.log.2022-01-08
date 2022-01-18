@@ -1,0 +1,26 @@
+2022-01-08 13:17:11,763 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-08 13:18:35,035 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:18:35,035 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:18:50,177 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-08 13:19:05,394 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:19:05,395 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:31:00,670 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-08 13:31:26,112 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Successfully Login None None
+2022-01-08 13:32:04,075 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["'NoneType' object is not callable"]} None
+2022-01-08 13:32:04,075 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["'NoneType' object is not callable"]} None
+2022-01-08 13:34:35,347 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["name 'serializer' is not defined"]} None
+2022-01-08 13:34:35,348 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["name 'serializer' is not defined"]} None
+2022-01-08 13:40:36,351 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Deactivated None None
+2022-01-08 13:41:08,827 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Deactivated None None
+2022-01-08 13:42:04,571 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-08 13:42:29,420 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Successfully Login None None
+2022-01-08 13:43:08,144 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:43:08,145 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:47:22,414 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Your account is Deactivated', code='invalid')]} None
+2022-01-08 13:47:22,414 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Your account is Deactivated', code='invalid')]} None
+2022-01-08 13:48:13,596 ERROR rest_utils.py:build_response:61  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:48:13,596 DEBUG rest_utils.py:build_response:78  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-08 13:48:22,241 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-08 13:48:47,636 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Successfully Login None None
+2022-01-08 13:49:09,509 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Deactivated None None
+2022-01-08 14:03:03,538 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Deactivated None None
