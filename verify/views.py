@@ -4,7 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from snv.common import app_logger, rest_utils
 
 from verify.serializers import CreateSessionSerializer
-from verify.utils import create_session
+from verify.repository import create_session
 
 
 # Create your views here.
@@ -19,7 +19,7 @@ class CreateSession(generics.GenericAPIView):
                 result, message, response_data = create_session(data)
                 if result:
                     return rest_utils.build_response(
-                        status.HTTP_200_OK, message, data=serializer.data, errors=None
+                        status.HTTP_201_CREATED, message, data=response_data, errors=None
                     )
                 else:
                     return rest_utils.build_response(
