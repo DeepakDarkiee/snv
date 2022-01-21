@@ -1,4 +1,8 @@
+from django.conf import settings
+from django.utils import timezone
 from rest_framework import serializers
+
+from verify.models import Verification
 
 
 class CreateSessionSerializer(serializers.Serializer):
@@ -14,4 +18,28 @@ class CreateSessionSerializer(serializers.Serializer):
 
     # additionalData: object
     vendorData = serializers.CharField(max_length=40)
-    timestamp = serializers.CharField(max_length=30)
+    timestamp = serializers.DateTimeField(default=timezone.now(), read_only=True)
+
+
+class FrontDocumentUploadSerializer(serializers.ModelSerializer):
+
+    context = serializers.CharField(
+        max_length=100, default="document-front", read_only=True
+    )
+    timestamp = serializers.DateTimeField(initial=timezone.now(), read_only=True)
+
+    class Meta:
+        model = Verification
+        fields = ("document_front", "context", "timestamp")
+
+
+class BackDocumentUploadSerializer(serializers.ModelSerializer):
+
+    context = serializers.CharField(
+        max_length=100, default="document-front", read_only=True
+    )
+    timestamp = serializers.DateTimeField(initial=timezone.now(), read_only=True)
+
+    class Meta:
+        model = Verification
+        fields = ("document_back", "context", "timestamp")

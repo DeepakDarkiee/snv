@@ -2,13 +2,17 @@ import json
 import pprint
 
 import requests
+from decouple import config
+from django.conf import settings
 
-url = "https://stationapi.veriff.com/v1/sessions/"
+from .encoding import encode_to_base64
+from .x_hmac import generate_signature
 
 
 class Variff:
     @staticmethod
     def create_session_api(request_data):
+        url = "https://stationapi.veriff.com/v1/sessions/"
         firstName = request_data["firstName"]
         lastName = request_data["lastName"]
         idNumber = request_data["idNumber"]
@@ -35,7 +39,7 @@ class Variff:
         payload = json.dumps(session)
 
         headers = {
-            "X-AUTH-CLIENT": "0478fb5a-7aa2-4b52-b34d-b12a28f8a752",  # api key
+            "X-AUTH-CLIENT": config("API_KEY"),  # api key
             "Content-Type": "application/json",
         }
 
@@ -43,3 +47,80 @@ class Variff:
         # pprint.pprint(response.json())
         session_object = response.json()
         return session_object
+
+    @staticmethod
+    def submit_session_api(session_id):
+        key = "5e601361-a800-4164-a30e-e6363cf4a26e"
+        url = f"https://stationapi.veriff.com/v1/sessions/{session_id}"
+
+        verification = {"status": "submitted", "timestamp": "2019-10-29T06:30:25.597Z"}
+        session = {"verification": verification}
+        payload = json.dumps(session)
+        signature = generate_signature(payload, key)
+        print(payload)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("PATCH", url, data=payload, headers=headers)
+        return response
+
+    @staticmethod
+    def upload_document_front_api(request_data):
+        key = "5e601361-a800-4164-a30e-e6363cf4a26e"
+        url = "https://stationapi.veriff.com/v1/sessions/acc2e105-7956-4b9a-96b2-cc21ead5b14a/media"
+        context = request_data["context"]
+        content = request_data["content"]
+        timestamp = request_data["timestamp"]
+        inflowFeedback = True
+        content = encode_to_base64(content)
+        image = {
+            "context": context,
+            "content": content,
+            "timestamp": timestamp,
+            "inflowFeedback": inflowFeedback,
+        }
+        document = {"image": image}
+        payload = json.dumps(document)
+        print(payload)
+        signature = generate_signature(payload, key)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        pprint.pprint(response.json())
+        document_front_object = response.json()
+        return document_front_object
+
+    @staticmethod
+    def upload_document_back_api(request_data):
+        key = "5e601361-a800-4164-a30e-e6363cf4a26e"
+        url = "https://stationapi.veriff.com/v1/sessions/acc2e105-7956-4b9a-96b2-cc21ead5b14a/media"
+        context = request_data["context"]
+        content = request_data["content"]
+        timestamp = request_data["timestamp"]
+        inflowFeedback = True
+        content = encode_to_base64(content)
+        image = {
+            "context": context,
+            "content": content,
+            "timestamp": timestamp,
+            "inflowFeedback": inflowFeedback,
+        }
+        document = {"image": image}
+        payload = json.dumps(document)
+        signature = generate_signature(payload, key)
+        print(payload)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        pprint.pprint(response.json())
+        document_back_object = response.json()
+        Variff.submit_session_api("acc2e105-7956-4b9a-96b2-cc21ead5b14a")
+        return document_back_object

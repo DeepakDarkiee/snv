@@ -1,31 +1,22 @@
-import json
-import pprint
+import codecs
+import hashlib
+import hmac
 
-import requests
-
-url = "https://stationapi.veriff.com/v1/sessions/"
-
-payload = json.dumps(
-    {
-        "verification": {
-            "callback": "https://veriff.com",
-            "person": {
-                "firstName": "John",
-                "lastName": "Smith",
-                # 'idNumber': '123456789'
-            },
-            "document": {"number": "B01234567", "type": "PASSPORT", "country": "EE"},
-            "vendorData": "1111",
-            "features": ["selfid"],
-            "timestamp": "2016-05-19T08:30:25.597Z",
-        }
+payloadAsString = {
+    "image": {
+        "context": "document-front",
+        "content": "/media/document/Screenshot_from_2021-08-05_14-16-56.png",
+        "timestamp": "2019-10-29T06:30:25.597Z",
     }
+}
+signature = (
+    hmac.new(
+        codecs.encode("5e601361-a800-4164-a30e-e6363cf4a26e"),
+        msg=codecs.encode(str(payloadAsString)),
+        digestmod=hashlib.sha256,
+    )
+    .hexdigest()
+    .lower()
 )
 
-headers = {
-    "X-AUTH-CLIENT": "0478fb5a-7aa2-4b52-b34d-b12a28f8a752",
-    "Content-Type": "application/json",
-}
-
-response = requests.request("POST", url, data=payload, headers=headers)
-pprint.pprint(response.json())
+print(signature)
