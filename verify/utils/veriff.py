@@ -4,6 +4,7 @@ import pprint
 import requests
 from decouple import config
 from django.conf import settings
+from verify.models import Verification
 
 from .encoding import encode_to_base64
 from .x_hmac import generate_signature
@@ -58,8 +59,7 @@ class Variff:
         verification = {"status": "submitted", "timestamp": "2019-10-29T06:30:25.597Z"}
         session = {"verification": verification}
         payload = json.dumps(session)
-        signature = generate_signature(payload, key)
-        print(payload)
+        signature = generate_signature(key, payload)
         headers = {
             "X-AUTH-CLIENT": config("API_KEY"),
             "X-HMAC-SIGNATURE": signature,
@@ -70,12 +70,14 @@ class Variff:
 
     @staticmethod
     def upload_document_front_api(request_data):
-        key = config("API_SECRET_KEY")
-        url = f"{BASE_ENDPOINT}/sessions/acc2e105-7956-4b9a-96b2-cc21ead5b14a/media"
         context = request_data["context"]
         content = request_data["content"]
         timestamp = request_data["timestamp"]
+        user = request_data["user"]
         inflowFeedback = True
+        session_id = Verification.objects.get(user=user).session_id
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}/media"
         content = encode_to_base64(content)
         image = {
             "context": context,
@@ -85,26 +87,26 @@ class Variff:
         }
         document = {"image": image}
         payload = json.dumps(document)
-        print(payload)
-        signature = generate_signature(payload, key)
+        signature = generate_signature(key, payload)
         headers = {
             "X-AUTH-CLIENT": config("API_KEY"),
             "X-HMAC-SIGNATURE": signature,
             "Content-Type": "application/json",
         }
         response = requests.request("POST", url, data=payload, headers=headers)
-        pprint.pprint(response.json())
         document_front_object = response.json()
         return document_front_object
 
     @staticmethod
     def upload_document_back_api(request_data):
-        key = config("API_SECRET_KEY")
-        url = f"{BASE_ENDPOINT}/sessions/acc2e105-7956-4b9a-96b2-cc21ead5b14a/media"
         context = request_data["context"]
         content = request_data["content"]
         timestamp = request_data["timestamp"]
+        user = request_data["user"]
         inflowFeedback = True
+        session_id = Verification.objects.get(user=user).session_id
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}/media"
         content = encode_to_base64(content)
         image = {
             "context": context,
@@ -114,26 +116,26 @@ class Variff:
         }
         document = {"image": image}
         payload = json.dumps(document)
-        signature = generate_signature(payload, key)
-        print(payload)
+        signature = generate_signature(key, payload)
         headers = {
             "X-AUTH-CLIENT": config("API_KEY"),
             "X-HMAC-SIGNATURE": signature,
             "Content-Type": "application/json",
         }
         response = requests.request("POST", url, data=payload, headers=headers)
-        pprint.pprint(response.json())
         document_back_object = response.json()
         return document_back_object
 
     @staticmethod
     def person_face_api(request_data):
-        key = (config("API_SECRET_KEY"),)
-        url = f"{BASE_ENDPOINT}/sessions/acc2e105-7956-4b9a-96b2-cc21ead5b14a/media"
         context = request_data["context"]
         content = request_data["content"]
         timestamp = request_data["timestamp"]
+        user = request_data["user"]
         inflowFeedback = True
+        session_id = Verification.objects.get(user=user).session_id
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}/media"
         content = encode_to_base64(content)
         image = {
             "context": context,
@@ -143,15 +145,28 @@ class Variff:
         }
         document = {"image": image}
         payload = json.dumps(document)
-        signature = generate_signature(payload, key)
-        print(payload)
+        signature = generate_signature(key, payload)
         headers = {
             "X-AUTH-CLIENT": config("API_KEY"),
             "X-HMAC-SIGNATURE": signature,
             "Content-Type": "application/json",
         }
         response = requests.request("POST", url, data=payload, headers=headers)
-        pprint.pprint(response.json())
         person_face_object = response.json()
-        Variff.submit_session_api("acc2e105-7956-4b9a-96b2-cc21ead5b14a")
+        Variff.submit_session_api(session_id)
         return person_face_object
+
+    @staticmethod
+    def get_decision_api(user):
+        session_id = Verification.objects.get(user=user).session_id
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}/decision"
+        signature = generate_signature(key, session_id)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("GET", url, headers=headers)
+        decision_object = response.json()
+        return decision_object

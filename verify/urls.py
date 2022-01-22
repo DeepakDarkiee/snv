@@ -5,6 +5,7 @@ from verify.views import (
     DocumentBackUpload,
     DocumentFrontUpload,
     PersonFaceUpload,
+    VerificationDecision,
 )
 
 urlpatterns = [
@@ -23,5 +24,10 @@ urlpatterns = [
         "person_face_upload/",
         PersonFaceUpload.as_view(),
         name="person_face_upload",
+    ),
+    path(
+        "decision/",
+        VerificationDecision.as_view(),
+        name="decision",
     ),
 ]

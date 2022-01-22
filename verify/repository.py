@@ -46,3 +46,15 @@ def person_face_upload(request_data):
     except Exception as e:
         result, message, data = False, str(e), None
     return result, message, data
+
+
+def get_decision(user):
+    try:
+        session_response = Variff.get_decision_api(user)
+        print(session_response)
+        decision = session_response["verification"]
+        result, message, data = True, "Success", decision
+
+    except Exception as e:
+        result, message, data = False, str(e), None
+    return result, message, data

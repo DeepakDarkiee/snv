@@ -10,6 +10,8 @@ from verify.repository import (
     back_document_upload,
     create_session,
     front_document_upload,
+    get_decision,
+    person_face_upload,
 )
 from verify.serializers import (
     BackDocumentUploadSerializer,
@@ -83,6 +85,7 @@ class DocumentFrontUpload(generics.GenericAPIView):
                     "content": document_front,
                     "context": "document-front",
                     "timestamp": "2019-10-29T06:30:25.597Z",
+                    "user": request.user,
                 }
                 result, message, response_data = front_document_upload(data)
                 if result:
@@ -133,6 +136,7 @@ class DocumentBackUpload(generics.GenericAPIView):
                     "content": document_back,
                     "context": "document-back",
                     "timestamp": "2019-10-29T06:30:25.597Z",
+                    "user": request.user,
                 }
                 result, message, response_data = back_document_upload(data)
                 if result:
@@ -183,8 +187,9 @@ class PersonFaceUpload(generics.GenericAPIView):
                     "content": face,
                     "context": "face",
                     "timestamp": "2019-10-29T06:30:25.597Z",
+                    "user": request.user,
                 }
-                result, message, response_data = back_document_upload(data)
+                result, message, response_data = person_face_upload(data)
                 if result:
                     return rest_utils.build_response(
                         status.HTTP_201_CREATED,
@@ -206,6 +211,27 @@ class PersonFaceUpload(generics.GenericAPIView):
                     data=None,
                     errors=serializer.errors,
                 )
+
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )
+
+
+class VerificationDecision(generics.GenericAPIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, format=None):
+        try:
+            user = request.user
+            result, message, response_data = get_decision(user)
+            return rest_utils.build_response(
+                status.HTTP_200_OK,
+                message=message,
+                data=response_data,
+                errors=None,
+            )
 
         except Exception as e:
             message = rest_utils.HTTP_REST_MESSAGES["500"]
