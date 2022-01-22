@@ -34,3 +34,15 @@ def back_document_upload(request_data):
     except Exception as e:
         result, message, data = False, str(e), None
     return result, message, data
+
+
+def person_face_upload(request_data):
+    try:
+        session_response = Variff.person_face_api(request_data)
+        print(session_response)
+        face = session_response["image"]
+        result, message, data = True, "Success", face
+
+    except Exception as e:
+        result, message, data = False, str(e), None
+    return result, message, data

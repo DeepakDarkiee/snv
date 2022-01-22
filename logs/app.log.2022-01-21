@@ -1,0 +1,274 @@
+2022-01-21 05:23:39,089 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 05:23:39,090 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 05:24:26,580 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:24:26,580 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:37:19,102 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:37:19,102 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:38:48,790 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:38:48,791 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:44:39,450 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:44:39,451 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:51:53,101 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:51:53,102 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:51:59,857 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:51:59,859 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:53:11,540 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:53:11,541 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:23,386 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:23,387 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:34,679 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:34,679 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:36,087 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:36,088 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:52,504 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:54:52,505 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:55:03,991 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:55:03,992 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:55:55,203 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:55:55,203 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:56:03,499 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:56:03,499 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:56:36,394 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:56:36,394 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:56:49,979 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 05:56:49,979 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:04:09,427 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:04:09,427 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:18:33,636 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:18:33,636 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:38,767 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:38,767 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:52,436 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:52,436 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:53,359 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:53,359 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:54,252 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:21:54,252 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:25:28,490 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:25:28,491 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:30:58,958 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:30:58,958 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:32:31,163 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:32:31,163 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:33:44,536 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:33:44,536 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:36:02,731 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:36:02,731 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:36:07,277 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:36:07,278 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:36:21,669 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:36:21,669 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:42:20,162 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:42:20,162 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:43:56,960 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:43:56,960 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:44:43,326 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:44:43,326 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:45:29,184 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:45:29,184 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:45:42,568 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:45:42,568 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:02,229 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:02,229 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:03,033 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:03,033 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:14,334 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:14,335 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:46,667 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:46:46,667 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:47:23,602 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:47:23,603 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:05,330 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:05,330 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:06,315 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:06,315 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:07,228 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:07,228 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:08,197 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:48:08,198 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:49:47,668 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:49:47,669 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:49:48,695 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:49:48,696 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:50:40,409 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:50:40,410 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:50:59,509 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:50:59,509 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:53:29,806 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:53:29,806 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:54:42,460 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:54:42,460 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:56:37,397 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:56:37,397 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:58:24,949 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 06:58:24,949 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:00:34,308 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:00:34,309 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:02:39,030 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:02:39,031 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:03:34,091 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:03:34,092 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:05:36,708 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:05:36,708 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:05:38,160 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:05:38,160 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:06:00,075 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:06:00,076 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:06:03,973 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:06:03,973 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:10:46,239 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:10:46,239 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:15:38,838 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:15:38,838 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:16:07,516 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:16:07,517 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:16:20,453 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:16:20,454 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:17:12,402 ERROR rest_utils.py:build_response:60  Response: 201 success {'non_field_errors': ['success']} None
+2022-01-21 07:17:12,402 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 success {'non_field_errors': ['success']} None
+2022-01-21 09:00:46,343 ERROR rest_utils.py:build_response:60  Response: 400 'NoneType' object is not subscriptable {'non_field_errors': ["'NoneType' object is not subscriptable"]} None
+2022-01-21 09:00:46,344 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'NoneType' object is not subscriptable {'non_field_errors': ["'NoneType' object is not subscriptable"]} None
+2022-01-21 09:03:25,544 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 09:03:25,544 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 09:04:03,408 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 09:04:03,409 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 09:10:16,855 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 09:10:16,856 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:44:26,959 ERROR rest_utils.py:build_response:60  Response: 400 'context' {'non_field_errors': ["'context'"]} None
+2022-01-21 11:44:26,960 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'context' {'non_field_errors': ["'context'"]} None
+2022-01-21 11:46:29,814 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:46:29,815 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:52:15,372 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:52:15,372 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:53:16,087 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:53:16,088 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:59:10,558 ERROR rest_utils.py:build_response:60  Response: 400 'verification' {'non_field_errors': ["'verification'"]} None
+2022-01-21 11:59:10,558 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'verification' {'non_field_errors': ["'verification'"]} None
+2022-01-21 11:59:38,109 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 11:59:38,113 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:08:15,774 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:08:15,774 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:19:12,180 ERROR rest_utils.py:build_response:60  Response: 400 'context' {'non_field_errors': ["'context'"]} None
+2022-01-21 12:19:12,180 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'context' {'non_field_errors': ["'context'"]} None
+2022-01-21 12:20:16,673 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:20:16,674 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:20:45,966 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:20:45,966 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:23:14,753 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:23:14,754 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:23:23,244 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:23:23,244 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:29:34,868 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:29:34,869 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:33:29,370 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:33:29,371 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:37:10,586 ERROR rest_utils.py:build_response:60  Response: 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-21 12:37:10,587 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-21 12:37:51,104 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:37:51,105 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:39:51,628 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:39:51,629 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:41:37,714 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 12:41:37,715 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:19:39,699 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:19:39,700 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:21:53,843 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:21:53,844 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:22:52,218 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:22:52,219 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:23:28,346 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:23:28,347 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:24:59,048 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:24:59,049 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:25:54,019 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:25:54,020 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:27:23,692 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:27:23,692 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:29:47,556 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:29:47,556 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:30:02,271 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:30:02,271 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:35:51,395 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:35:51,395 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:36:28,072 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:36:28,075 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:37:10,708 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:37:10,708 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:37:24,609 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:37:24,609 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:38:24,963 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:38:24,963 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:38:58,280 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:38:58,282 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:40:49,152 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:40:49,154 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:40:49,896 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:40:49,896 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:41:38,516 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:41:38,516 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:41:46,113 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:41:46,113 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:42:34,612 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 13:42:34,613 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:13:57,711 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:13:57,711 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:14:36,997 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:14:36,997 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:17:45,562 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:17:45,563 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:19:02,960 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:19:02,961 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:20:33,174 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:20:33,176 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:20:45,764 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:20:45,764 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:21:31,436 ERROR rest_utils.py:build_response:60  Response: 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-21 19:21:31,436 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-21 19:21:43,356 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:21:43,356 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:26:40,578 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:26:40,578 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:28:01,138 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:28:01,140 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:28:09,515 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:28:09,515 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:30:28,139 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:30:28,139 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:31:35,370 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:31:35,374 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:32:56,625 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:32:56,626 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:33:50,813 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:33:50,814 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:35:51,570 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:35:51,570 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:37:20,315 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:37:20,315 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:37:46,634 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:37:46,635 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:38:38,241 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:38:38,242 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:40:44,501 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:40:44,501 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:43:51,700 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:43:51,701 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:46:56,340 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:46:56,341 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:47:31,078 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:47:31,078 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:48:23,910 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:48:23,910 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:50:31,376 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:50:31,377 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:54:27,665 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 19:54:27,665 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:02:52,132 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:02:52,133 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:35:41,095 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:35:41,095 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:36:25,575 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:36:25,576 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:36:34,898 ERROR rest_utils.py:build_response:60  Response: 400 name 'submit_session_api' is not defined {'non_field_errors': ["name 'submit_session_api' is not defined"]} None
+2022-01-21 20:36:34,898 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 name 'submit_session_api' is not defined {'non_field_errors': ["name 'submit_session_api' is not defined"]} None
+2022-01-21 20:38:41,662 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-21 20:38:41,662 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None

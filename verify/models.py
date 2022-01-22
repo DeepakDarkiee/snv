@@ -1,3 +1,4 @@
+from accounts.models import User
 from django.db import models
 
 
@@ -7,3 +8,10 @@ class Verification(models.Model):
     document_front = models.ImageField(upload_to="document", null=True, blank=True)
     document_back = models.ImageField(upload_to="document", null=True, blank=True)
     photo = models.ImageField(upload_to="document", null=True, blank=True)
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name="verification",
+        null=True,
+        blank=True,
+    )

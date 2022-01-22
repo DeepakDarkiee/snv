@@ -1,6 +1,11 @@
 from django.urls import path
 
-from verify.views import CreateSession, DocumentBackUpload, DocumentFrontUpload
+from verify.views import (
+    CreateSession,
+    DocumentBackUpload,
+    DocumentFrontUpload,
+    PersonFaceUpload,
+)
 
 urlpatterns = [
     path("create_session/", CreateSession.as_view(), name="create_session"),
@@ -13,5 +18,10 @@ urlpatterns = [
         "back_document_upload/",
         DocumentBackUpload.as_view(),
         name="back_document_upload",
+    ),
+    path(
+        "person_face_upload/",
+        PersonFaceUpload.as_view(),
+        name="person_face_upload",
     ),
 ]

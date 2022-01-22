@@ -36,10 +36,20 @@ class FrontDocumentUploadSerializer(serializers.ModelSerializer):
 class BackDocumentUploadSerializer(serializers.ModelSerializer):
 
     context = serializers.CharField(
-        max_length=100, default="document-front", read_only=True
+        max_length=100, default="document-back", read_only=True
     )
     timestamp = serializers.DateTimeField(initial=timezone.now(), read_only=True)
 
     class Meta:
         model = Verification
         fields = ("document_back", "context", "timestamp")
+
+
+class PersonFaceUploadSerializer(serializers.ModelSerializer):
+
+    context = serializers.CharField(max_length=100, default="face", read_only=True)
+    timestamp = serializers.DateTimeField(initial=timezone.now(), read_only=True)
+
+    class Meta:
+        model = Verification
+        fields = ("photo", "context", "timestamp")

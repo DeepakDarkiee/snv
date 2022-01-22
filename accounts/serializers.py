@@ -120,10 +120,3 @@ class UpdateUserSerializer(serializers.ModelSerializer):
         )
 
 
-# class DeactivateUserSerializer(serializers.ModelSerializer):
-
-#     class Meta:
-#         model = User
-#         fields = (
-#             "is_active",
-#         )

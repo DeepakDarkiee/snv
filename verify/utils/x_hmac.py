@@ -4,6 +4,7 @@ import hmac
 
 
 def generate_signature(payload, key):
+    print(key)
     signature = (
         hmac.new(
             codecs.encode(key),
