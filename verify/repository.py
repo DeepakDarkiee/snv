@@ -1,3 +1,4 @@
+from verify.models import Verification
 from verify.utils.veriff import Variff
 
 
@@ -53,6 +54,8 @@ def get_decision(user):
         session_response = Variff.get_decision_api(user)
         print(session_response)
         decision = session_response["verification"]
+        if decision['status'] == "approved":
+            verified = Verification.objects.filter(user=user).update(is_verified=True)
         result, message, data = True, "Success", decision
 
     except Exception as e:
