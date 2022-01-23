@@ -37,8 +37,9 @@ class CreateSession(generics.GenericAPIView):
                 verification_object, created = Verification.objects.get_or_create(
                     user=request.user,
                 )
-                verification_object.session_id = session_id
-                verification_object.save()
+                if not verification_object.session_id:
+                    verification_object.session_id = session_id
+                    verification_object.save()
                 if result:
                     return rest_utils.build_response(
                         status.HTTP_201_CREATED,

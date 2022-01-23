@@ -12,6 +12,42 @@ from .x_hmac import generate_signature
 BASE_ENDPOINT = "https://stationapi.veriff.com/v1"
 
 
+class Status:
+    @staticmethod
+    def submit_verification_api(session_id):
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}"
+
+        verification = {"status": "submitted", "timestamp": "2019-10-29T06:30:25.597Z"}
+        session = {"verification": verification}
+        payload = json.dumps(session)
+        signature = generate_signature(key, payload)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("PATCH", url, data=payload, headers=headers)
+        return response
+
+    @staticmethod
+    def start_verification_api(session_id):
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}"
+
+        verification = {"status": "started", "timestamp": "2019-10-29T06:30:25.597Z"}
+        session = {"verification": verification}
+        payload = json.dumps(session)
+        signature = generate_signature(key, payload)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("PATCH", url, data=payload, headers=headers)
+        return response
+
+
 class Variff:
     @staticmethod
     def create_session_api(request_data):
@@ -27,7 +63,7 @@ class Variff:
 
         person = {"firstName": firstName, "lastName": lastName, "idNumber": idNumber}
         document = {"number": number, "type": documentType, "country": country}
-
+        
         verification = {
             "callback": "https://veriff.com",
             "vendorData": vendorData,
@@ -40,7 +76,7 @@ class Variff:
         session = {"verification": verification}
 
         payload = json.dumps(session)
-
+        print(payload)
         headers = {
             "X-AUTH-CLIENT": config("API_KEY"),  # api key
             "Content-Type": "application/json",
@@ -50,23 +86,6 @@ class Variff:
         # pprint.pprint(response.json())
         session_object = response.json()
         return session_object
-
-    @staticmethod
-    def submit_session_api(session_id):
-        key = config("API_SECRET_KEY")
-        url = f"{BASE_ENDPOINT}/sessions/{session_id}"
-
-        verification = {"status": "submitted", "timestamp": "2019-10-29T06:30:25.597Z"}
-        session = {"verification": verification}
-        payload = json.dumps(session)
-        signature = generate_signature(key, payload)
-        headers = {
-            "X-AUTH-CLIENT": config("API_KEY"),
-            "X-HMAC-SIGNATURE": signature,
-            "Content-Type": "application/json",
-        }
-        response = requests.request("PATCH", url, data=payload, headers=headers)
-        return response
 
     @staticmethod
     def upload_document_front_api(request_data):
@@ -95,6 +114,7 @@ class Variff:
         }
         response = requests.request("POST", url, data=payload, headers=headers)
         document_front_object = response.json()
+        Status.start_verification_api(session_id)
         return document_front_object
 
     @staticmethod
@@ -153,7 +173,7 @@ class Variff:
         }
         response = requests.request("POST", url, data=payload, headers=headers)
         person_face_object = response.json()
-        Variff.submit_session_api(session_id)
+        Status.submit_verification_api(session_id)
         return person_face_object
 
     @staticmethod
