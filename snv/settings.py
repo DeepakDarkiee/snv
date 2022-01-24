@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "accounts",
+    "verify",
     # Third party libraries
     "drf_yasg",
     "rest_framework",

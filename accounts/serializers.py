@@ -118,12 +118,3 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             "email",
             "profile_pic",
         )
-
-
-# class DeactivateUserSerializer(serializers.ModelSerializer):
-
-#     class Meta:
-#         model = User
-#         fields = (
-#             "is_active",
-#         )

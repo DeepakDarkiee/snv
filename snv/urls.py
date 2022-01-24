@@ -46,6 +46,7 @@ urlpatterns = (
         path("admin/", admin.site.urls),
         path("sentry-debug/", trigger_error),
         path("api/accounts/", include("accounts.urls")),
+        path("api/verify/", include("verify.urls")),
     ]
     + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

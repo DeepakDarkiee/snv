@@ -1,0 +1,172 @@
+2022-01-22 15:11:13,771 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 User OTP successfully send None None
+2022-01-22 15:11:39,849 ERROR rest_utils.py:build_response:60  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='This contact Number Already Exits', code='invalid')]} None
+2022-01-22 15:11:39,849 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='This contact Number Already Exits', code='invalid')]} None
+2022-01-22 15:11:50,504 ERROR rest_utils.py:build_response:60  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-22 15:11:50,504 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-22 16:23:25,074 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["'face'"]} None
+2022-01-22 16:23:25,074 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["'face'"]} None
+2022-01-22 16:25:11,802 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["'face'"]} None
+2022-01-22 16:25:11,802 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["'face'"]} None
+2022-01-22 16:25:54,251 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 16:25:54,251 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 16:28:35,117 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 16:28:35,117 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 16:54:49,654 ERROR rest_utils.py:build_response:60  Response: 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:54:49,654 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:55:04,222 ERROR rest_utils.py:build_response:60  Response: 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:55:04,222 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:55:05,386 ERROR rest_utils.py:build_response:60  Response: 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:55:05,387 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:55:38,481 ERROR rest_utils.py:build_response:60  Response: 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:55:38,482 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:56:16,584 ERROR rest_utils.py:build_response:60  Response: 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:56:16,584 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:56:58,940 ERROR rest_utils.py:build_response:60  Response: 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-22 16:56:58,940 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-22 16:57:15,654 ERROR rest_utils.py:build_response:60  Response: 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:57:15,654 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple) {'non_field_errors': ["encoding with 'utf-8' codec failed (TypeError: utf_8_encode() argument 1 must be str, not tuple)"]} None
+2022-01-22 16:58:29,645 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 16:58:29,645 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 17:02:44,919 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 17:02:44,920 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 17:02:53,043 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 17:02:53,044 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 19:49:32,823 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 19:49:32,824 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 19:50:53,464 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 User OTP successfully send None None
+2022-01-22 19:51:39,740 ERROR rest_utils.py:build_response:60  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-22 19:51:39,741 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-22 19:51:55,648 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 User Successfully Login None None
+2022-01-22 19:53:17,078 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 19:53:17,078 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 19:54:05,786 ERROR rest_utils.py:build_response:60  Response: 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-22 19:54:05,787 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 Failed {'non_field_errors': [ErrorDetail(string='Invalid OTP', code='invalid')]} None
+2022-01-22 19:54:33,725 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 19:54:33,726 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:08:48,598 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:08:48,599 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:10:14,967 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["'tuple' object has no attribute 'update'"]} None
+2022-01-22 20:10:14,967 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["'tuple' object has no attribute 'update'"]} None
+2022-01-22 20:11:47,483 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:11:47,484 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:19:33,498 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:19:33,499 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:21:28,528 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:21:28,529 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:22:18,026 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:22:18,026 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:23:03,315 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:23:03,315 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:24:43,696 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:24:43,697 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:29:36,985 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:29:36,986 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:31:35,431 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:31:35,431 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:36:17,364 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:36:17,364 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:36:19,319 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:36:19,319 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-22 20:36:39,285 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:36:39,285 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:39:05,699 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:39:05,699 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:40:40,859 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:40:40,859 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:40:42,322 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:40:42,322 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:40:46,839 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:40:46,839 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:43:10,256 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["name 'document_front' is not defined"]} None
+2022-01-22 20:43:10,256 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["name 'document_front' is not defined"]} None
+2022-01-22 20:43:23,761 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:43:23,761 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:44:51,684 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:44:51,686 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:45:46,149 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/Screenshot from 2021-08-05 14-16-56.png' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/Screenshot from 2021-08-05 14-16-56.png'"]} None
+2022-01-22 20:45:46,149 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/Screenshot from 2021-08-05 14-16-56.png' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/Screenshot from 2021-08-05 14-16-56.png'"]} None
+2022-01-22 20:46:36,548 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:46:36,548 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 20:48:53,070 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:48:53,070 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:49:37,823 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:49:37,823 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:52:51,296 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:52:51,296 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:53:39,410 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:53:39,410 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:53:42,634 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:53:42,634 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:54:07,027 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:54:07,028 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:54:23,710 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:54:23,711 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:54:30,261 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:54:30,262 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:55:14,247 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:55:14,247 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 20:57:01,633 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["'FrontDocumentUploadSerializer' object has no attribute 'request'"]} None
+2022-01-22 20:57:01,633 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["'FrontDocumentUploadSerializer' object has no attribute 'request'"]} None
+2022-01-22 20:58:47,240 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["'request'"]} None
+2022-01-22 20:58:47,240 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["'request'"]} None
+2022-01-22 20:58:54,256 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["'request'"]} None
+2022-01-22 20:58:54,256 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["'request'"]} None
+2022-01-22 21:01:04,209 ERROR rest_utils.py:build_response:60  Response: 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 21:01:04,209 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 [Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None' {'non_field_errors': ["[Errno 2] No such file or directory: '/home/deep/Live-Projects/snv_backend/snv/None'"]} None
+2022-01-22 21:03:01,678 ERROR rest_utils.py:build_response:99  Exception : 'bool' object has no attribute 'replace'
+2022-01-22 21:07:25,106 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:07:25,107 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:09:47,532 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:09:47,533 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:10:03,196 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:10:03,196 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:10:22,858 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:10:22,858 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:40:34,552 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:40:34,553 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:42:26,773 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:42:26,773 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:43:36,948 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 21:43:36,949 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:09:50,418 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:09:50,419 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:10:33,919 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:10:33,920 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:11:15,001 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:11:15,001 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:12:21,753 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:12:21,754 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:13:13,606 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:13:13,607 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:16:18,996 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:16:18,997 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:16:51,885 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:16:51,886 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:18:08,038 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:18:08,039 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:19:00,845 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:19:00,846 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:20:44,316 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:20:44,316 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:21:49,241 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:21:49,241 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:22:19,328 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:22:19,328 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:22:43,302 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:22:43,303 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:24:41,295 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:24:41,296 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-22 22:25:46,261 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:25:46,261 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:28:43,389 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:28:43,390 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:29:13,050 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:29:13,051 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:31:00,851 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:31:00,852 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:31:14,992 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:31:14,993 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["local variable 'result' referenced before assignment"]} None
+2022-01-22 22:32:37,862 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ["build_response() missing 1 required positional argument: 'message'"]} None
+2022-01-22 22:32:37,863 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ["build_response() missing 1 required positional argument: 'message'"]} None
+2022-01-22 22:34:25,560 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-22 22:37:45,273 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
