@@ -1,4 +1,7 @@
+from decouple import config
+
 from verify.models import Verification
+from verify.utils.qr_code import generate_qr
 from verify.utils.veriff import Variff
 
 
@@ -54,9 +57,40 @@ def get_decision(user):
         session_response = Variff.get_decision_api(user)
         print(session_response)
         decision = session_response["verification"]
-        if decision['status'] == "approved":
+        if decision["status"] == "approved":
             verified = Verification.objects.filter(user=user).update(is_verified=True)
+            obj = Verification.objects.get(user=user)
+            logo = obj.photo
+            session_id = obj.session_id
+            qr = generate_qr(user, logo, session_id)
+            obj.qr_code = qr
+            obj.save()
         result, message, data = True, "Success", decision
+
+    except Exception as e:
+        result, message, data = False, str(e), None
+    return result, message, data
+
+
+def get_person(session_id):
+    try:
+        session_response = Variff.get_person_api(session_id)
+        print(session_response)
+        person = session_response["verification"]
+        result, message, data = True, "Success", person
+
+    except Exception as e:
+        result, message, data = False, str(e), None
+    return result, message, data
+
+
+def get_qr(user):
+    try:
+        base_url = config("URL")
+        qr_code_url = Verification.objects.get(user=user).qr_code.url
+        qr_code = base_url + qr_code_url
+        qr = {"qr_code": qr_code}
+        result, message, data = True, "Success", qr
 
     except Exception as e:
         result, message, data = False, str(e), None

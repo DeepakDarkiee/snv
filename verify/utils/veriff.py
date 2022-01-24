@@ -63,7 +63,7 @@ class Variff:
 
         person = {"firstName": firstName, "lastName": lastName, "idNumber": idNumber}
         document = {"number": number, "type": documentType, "country": country}
-        
+
         verification = {
             "callback": "https://veriff.com",
             "vendorData": vendorData,
@@ -76,7 +76,6 @@ class Variff:
         session = {"verification": verification}
 
         payload = json.dumps(session)
-        print(payload)
         headers = {
             "X-AUTH-CLIENT": config("API_KEY"),  # api key
             "Content-Type": "application/json",
@@ -190,3 +189,17 @@ class Variff:
         response = requests.request("GET", url, headers=headers)
         decision_object = response.json()
         return decision_object
+
+    @staticmethod
+    def get_person_api(session_id):
+        key = config("API_SECRET_KEY")
+        url = f"{BASE_ENDPOINT}/sessions/{session_id}/decision"
+        signature = generate_signature(key, session_id)
+        headers = {
+            "X-AUTH-CLIENT": config("API_KEY"),
+            "X-HMAC-SIGNATURE": signature,
+            "Content-Type": "application/json",
+        }
+        response = requests.request("GET", url, headers=headers)
+        person_object = response.json()
+        return person_object

@@ -11,6 +11,8 @@ from verify.repository import (
     create_session,
     front_document_upload,
     get_decision,
+    get_person,
+    get_qr,
     person_face_upload,
 )
 from verify.serializers import (
@@ -227,6 +229,45 @@ class VerificationDecision(generics.GenericAPIView):
         try:
             user = request.user
             result, message, response_data = get_decision(user)
+            return rest_utils.build_response(
+                status.HTTP_200_OK,
+                message=message,
+                data=response_data,
+                errors=None,
+            )
+
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )
+
+
+class SNVerifiedPerson(generics.GenericAPIView):
+    def get(self, request, session_id, format=None):
+        try:
+            result, message, response_data = get_person(session_id)
+            return rest_utils.build_response(
+                status.HTTP_200_OK,
+                message=message,
+                data=response_data,
+                errors=None,
+            )
+
+        except Exception as e:
+            message = rest_utils.HTTP_REST_MESSAGES["500"]
+            return rest_utils.build_response(
+                status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
+            )
+
+
+class PersonQRCode(generics.GenericAPIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, format=None):
+        try:
+            user = request.user
+            result, message, response_data = get_qr(user)
             return rest_utils.build_response(
                 status.HTTP_200_OK,
                 message=message,

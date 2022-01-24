@@ -118,5 +118,3 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             "email",
             "profile_pic",
         )
-
-

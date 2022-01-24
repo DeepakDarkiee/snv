@@ -8,6 +8,7 @@ class Verification(models.Model):
     document_front = models.ImageField(upload_to="document", null=True, blank=True)
     document_back = models.ImageField(upload_to="document", null=True, blank=True)
     photo = models.ImageField(upload_to="document", null=True, blank=True)
+    qr_code = models.ImageField(upload_to="qr_code", null=True, blank=True)
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
@@ -16,6 +17,6 @@ class Verification(models.Model):
         blank=True,
     )
     is_verified = models.BooleanField(default=False)
-    
+
     def __str__(self):
         return self.user.contact

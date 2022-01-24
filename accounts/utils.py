@@ -36,7 +36,6 @@ def verify_contact_otp(request_data):
     phone = request_data.get("contact", None)
     otp = request_data.get("otp", None)
     verify = user_check_otp(phone, otp)
-    print(verify)
     if verify:
         result, message, data = True, "Successfully Verified", None
     else:

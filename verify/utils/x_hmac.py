@@ -25,5 +25,4 @@ def generate_signature(key, payload=None):
             .lower()
         )
 
-    print(signature)
     return signature

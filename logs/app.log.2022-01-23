@@ -1,0 +1,91 @@
+2022-01-23 20:23:17,212 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:23:17,214 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:23:28,310 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 20:23:47,506 ERROR rest_utils.py:build_response:60  Response: 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-23 20:23:47,507 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-23 20:24:20,433 ERROR rest_utils.py:build_response:60  Response: 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-23 20:24:20,434 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-23 20:25:17,782 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:25:17,782 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:32:47,038 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:32:47,039 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:35:50,639 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:35:50,640 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:36:27,963 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:36:27,963 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:37:08,472 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 20:53:04,559 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:53:04,560 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:54:02,335 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:54:02,335 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:54:37,889 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:54:37,890 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:55:06,606 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:55:06,608 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 20:57:07,222 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 21:00:46,958 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:00:46,958 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:02:35,127 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:02:35,127 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:04:39,649 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 'verification' None None
+2022-01-23 21:05:09,858 ERROR rest_utils.py:build_response:60  Response: 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-23 21:05:09,859 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 'image' {'non_field_errors': ["'image'"]} None
+2022-01-23 21:06:11,933 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:06:11,934 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:07:00,269 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:07:00,270 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:07:38,960 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:07:38,961 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:07:58,225 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:07:58,226 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:08:56,767 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 21:10:49,605 ERROR rest_utils.py:build_response:60  Response: 400 Failed {'lastName': [ErrorDetail(string='This field may not be blank.', code='blank')]} None
+2022-01-23 21:10:49,605 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 Failed {'lastName': [ErrorDetail(string='This field may not be blank.', code='blank')]} None
+2022-01-23 21:11:10,593 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:11:10,594 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:14:55,648 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 'verification' None None
+2022-01-23 21:15:38,344 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 21:16:19,924 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:16:19,924 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:19:38,351 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:19:38,351 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:23:11,604 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-23 21:23:11,605 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-23 21:27:27,211 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-23 21:27:27,211 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-23 21:28:11,497 ERROR rest_utils.py:build_response:60  Response: 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-23 21:28:11,497 DEBUG rest_utils.py:build_response:77  Response: 200 OK 500 Internal server error {'non_field_errors': ['UNIQUE constraint failed: verify_verification.user_id']} None
+2022-01-23 21:33:12,741 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:33:12,743 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:33:23,700 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:33:23,701 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:33:30,660 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:33:30,661 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:40:33,523 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:40:33,524 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:47:04,191 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:47:04,191 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:47:57,739 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:47:57,739 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:48:19,853 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:48:19,854 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:48:32,009 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:48:32,009 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:50:13,628 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:50:13,629 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:51:23,648 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:51:23,648 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 21:52:08,082 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 21:52:21,235 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 21:53:17,715 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 21:57:54,449 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 22:01:37,468 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 22:39:16,214 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 22:39:16,215 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 22:39:43,119 ERROR rest_utils.py:build_response:60  Response: 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 22:39:43,120 DEBUG rest_utils.py:build_response:77  Response: 200 OK 201 Success {'non_field_errors': ['Success']} None
+2022-01-23 22:40:38,894 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 23:02:57,476 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 23:06:10,490 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 'dict' object has no attribute 'status' None None
+2022-01-23 23:06:57,598 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None
+2022-01-23 23:07:39,497 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 Success None None

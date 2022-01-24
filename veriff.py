@@ -18,5 +18,3 @@ signature = (
     .hexdigest()
     .lower()
 )
-
-print(signature)
