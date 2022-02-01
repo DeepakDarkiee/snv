@@ -35,6 +35,10 @@ DATABASES = {
 #     }
 # }
 
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#   'http://localhost:8000',
+# )
 
 sentry_sdk.init(
     dsn="https://60ceec3dff694378ac59e0665bd1bd1f@o1116976.ingest.sentry.io/6150835",
