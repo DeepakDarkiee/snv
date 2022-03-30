@@ -32,11 +32,11 @@ urlpatterns = [
         VerificationDecision.as_view(),
         name="decision",
     ),
-    path(
-        "person/<str:session_id>/",
-        SNVerifiedPerson.as_view(),
-        name="person",
-    ),
+    # path(
+    #     "person/<str:session_id>/",
+    #     SNVerifiedPerson.as_view(),
+    #     name="person",
+    # ),
     path(
         "person_qr/",
         PersonQRCode.as_view(),
