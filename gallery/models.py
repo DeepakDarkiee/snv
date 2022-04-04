@@ -10,7 +10,7 @@ from django.utils.translation import gettext as _
 from django.utils.encoding import escape_uri_path
 from PIL import Image as PILImage
 from . import settings as app_settings
-
+from accounts.models import User
 
 logger = logging.getLogger(__name__)
 storage = get_storage_class()()
@@ -28,6 +28,7 @@ class Gallery(models.Model):
     """
     Model that represents gallery model.
     """
+    user = models.OneToOneField(User,on_delete=models.CASCADE,related_name='user_gallery')
     name = models.CharField(
         _('Name'),
         max_length=1024,
@@ -62,9 +63,9 @@ class Gallery(models.Model):
         """
         return escape_uri_path(self.name)
 
-    def delete_gallery_directory(self):
+    def delete_galary_directory(self):
         """
-        Deletes gallery directory recursively with all the images and
+        Deletes galary directory recursively with all the images and
         thumbnails.
         """
         path = escape_uri_path(self.name)
@@ -92,6 +93,7 @@ class Image(models.Model):
     """
     Model that represents image which belongs to gallery.
     """
+    
     gallery = models.ForeignKey(
         _('Gallery'),
         verbose_name=_('Gallery'),
@@ -164,7 +166,7 @@ class Image(models.Model):
         verbose_name_plural = _('Images')
 
     def __str__(self):
-        return self.name or _('This image has no name')
+        return self.name or str(self.file).split('/')[-1]
 
     @property
     def fullpath(self):
@@ -336,3 +338,66 @@ class Image(models.Model):
 
         # delete image file
         storage.delete(self.file.name)
+
+def validate_album_name(value):
+    """
+    Validator fot the `Album.name` field. It can't contain '/' character.
+    """
+    if value and value.find('/') > -1:
+        raise ValidationError(_('Album name can\'t contain \'/\' character'))
+
+
+class Album(models.Model):
+    """
+    Model that represents Album model.
+    """
+    name = models.CharField(
+        _('Name'),
+        max_length=1024,
+        help_text=_('Name of the album. Must be unique.'),
+        validators=[validate_album_name],
+    )
+
+    created = models.DateTimeField(
+        _('Created'),
+        auto_now_add=True,
+        help_text=_('Timestamp of creation.'),
+    )
+
+    modified = models.DateTimeField(
+        _('Modified'),
+        auto_now=True,
+        help_text=_('Timestamp of last modification.'),
+    )
+
+    gallery = models.ForeignKey(Gallery, on_delete=models.CASCADE,related_name="albums")
+    images = models.ManyToManyField(Image)
+
+    class Meta:
+        verbose_name = _('Album')
+        verbose_name_plural = _('Albums')
+
+    def __str__(self):
+        return self.name
+
+    @property
+    def path(self):
+        """
+        Returns escaped name if the album for the URL (e.g. "My%20Gallery")
+        """
+        return escape_uri_path(self.name)
+
+    def delete_album_directory(self):
+        """
+        Deletes album directory recursively with all the images and
+        thumbnails.
+        """
+        path = escape_uri_path(self.name)
+
+        # absolute path to gallery directory
+        absolute_path = os.path.join(storage.location,
+                                     app_settings.ALBUM_SUBDIRECTORY,
+                                     path)
+
+        # detele recursively
+        shutil.rmtree(absolute_path)

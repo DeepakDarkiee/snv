@@ -1,7 +1,7 @@
 import logging
 from rest_framework import serializers
-from ..models import Gallery, Image
-
+from ..models import Album, Gallery, Image
+from .utils import *
 
 logger = logging.getLogger(__name__)
 
@@ -18,7 +18,7 @@ class ImageSerializer(serializers.ModelSerializer):
 class ImageUploadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
-        fields = ['gallery', 'path', 'fullpath', 'name', 'file']
+        fields = ['user','gallery', 'path', 'fullpath', 'name', 'file']
 
 
 class GallerySerializer(serializers.ModelSerializer):
@@ -26,6 +26,7 @@ class GallerySerializer(serializers.ModelSerializer):
     REST API serializer for the Gallery model.
     """
     image = serializers.SerializerMethodField()
+
 
     class Meta:
         model = Gallery
@@ -61,7 +62,7 @@ class GalleryDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Gallery
-        fields = ['path', 'name', 'images']
+        fields = ['user','path', 'name', 'images']
 
     def get_images(self, obj):
         image = obj.image_set.all()
@@ -79,3 +80,32 @@ class ImagePreviewSerializer(serializers.Serializer):
             raise serializers.ValidationError('Both sizes can\'t be zero!')
 
         return data
+
+class AlbumSerializer(serializers.ModelSerializer):
+    # i don't want to rename default `realtion_name` to be
+    # consistent with standard Django ORM
+    # images = serializers.SerializerMethodField()  
+
+    class Meta:
+        model = Album
+        fields = ['gallery','path', 'name', 'images']
+
+    def validate(self, data):
+        validated_data = {"album_name": data["name"],"gallery":data["gallery"]}
+        result, message = is_album_exist(validated_data)
+        if not result:
+            raise serializers.ValidationError(message)
+        return data
+
+    # def get_images(self, obj):
+    #     image = obj.image_set.all()
+    #     return image
+
+class AlbumDetailSerializer(serializers.ModelSerializer):
+    # i don't want to rename default `realtion_name` to be
+    # consistent with standard Django ORM
+    # images = serializers.SerializerMethodField()  
+
+    class Meta:
+        model = Album
+        fields = ['images',]
