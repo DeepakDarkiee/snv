@@ -244,6 +244,7 @@ class VerificationDecision(generics.GenericAPIView):
 
 
 class SNVerifiedPerson(generics.GenericAPIView):
+    
     def get(self, request, session_id, format=None):
         try:
             result, message, response_data = get_person(session_id)
