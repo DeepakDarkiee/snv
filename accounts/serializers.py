@@ -1,7 +1,9 @@
+from django.conf import settings
 from rest_framework import serializers
+from snv.common.validations import Validator
+
 from accounts.models import User
 from accounts.utils import verify_contact_otp
-from snv.common.validations import Validator
 
 
 class RegisterSerializer(serializers.ModelSerializer):
@@ -14,7 +16,6 @@ class RegisterSerializer(serializers.ModelSerializer):
     #     result, message, data = verify_contact_otp(validated_data)
     #     if not result:
     #         raise serializers.ValidationError(message)
-            
 
     #     data = validated_data.pop("otp", None)
     #     return super().create(validated_data)
@@ -24,8 +25,8 @@ class RegisterSerializer(serializers.ModelSerializer):
         fields = ["contact", "otp"]
 
     def validate(self, data):
-        validated_data={'otp':data['otp'],'contact':data['contact']}
-        result, message, data = verify_contact_otp(validated_data)
+        validated_data = {"otp": data["otp"], "contact": data["contact"]}
+        result, message, data_otp = verify_contact_otp(validated_data)
         if not result:
             raise serializers.ValidationError(message)
 
@@ -39,6 +40,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         #         raise serializers.ValidationError(message)
 
         return data
+
 
 class OTPVerificationSerializer(serializers.Serializer):
     otp = serializers.CharField(max_length=555)
@@ -55,10 +57,12 @@ class UserSendOptSerializer(serializers.Serializer):
     #     if not result:
     #         raise serializers.ValidationError(message)
     #     return data
-    
+
+
 class LoginSerializer(serializers.Serializer):
     contact = serializers.CharField(
-        max_length=68, min_length=5, write_only=True, required=False)
+        max_length=68, min_length=5, write_only=True, required=False
+    )
     otp = serializers.IntegerField(write_only=True)
 
     tokens = serializers.CharField(read_only=True)
@@ -66,32 +70,36 @@ class LoginSerializer(serializers.Serializer):
 
     class Meta:
         model = User
-        fields = ["tokens", "refresh_token", "contact","otp"]
+        fields = ["tokens", "refresh_token", "contact", "otp"]
 
     def validate(self, attrs):
         contact = attrs.get("contact", None)
         otp = attrs.get("otp", None)
-        validated_data = {'otp':otp,'contact':contact}
-        otp_result, otp_message, data = verify_contact_otp(validated_data)
-        if not otp_result:
-            raise serializers.ValidationError(otp_message)
-            return {
-                "message": otp_message,
-            }
-        else:
-            result, message, user = Validator.is_valid_user(contact)
-            if not result:
-                raise serializers.ValidationError(message)
+        user = User.objects.get(contact=contact)
+        if user.is_active:
+            validated_data = {"otp": otp, "contact": contact}
+            otp_result, otp_message, data = verify_contact_otp(validated_data)
+            if not otp_result:
+                raise serializers.ValidationError(otp_message)
+                return {
+                    "message": otp_message,
+                }
+            else:
+                result, message, user = Validator.is_valid_user(contact)
+                if not result:
+                    raise serializers.ValidationError(message)
 
-            return {
-                "contact": user.contact,
-                "tokens": user.tokens().get("access"),
-                "refresh_token": user.tokens().get("refresh"),
-                "password": user.password,
-                "message": otp_message,
-            }
-       
-       
+                return {
+                    "contact": user.contact,
+                    "tokens": user.tokens().get("access"),
+                    "refresh_token": user.tokens().get("refresh"),
+                    "password": user.password,
+                    "message": otp_message,
+                }
+        else:
+            raise serializers.ValidationError("Your account is Deactivated")
+
+
 class UpdateUserSerializer(serializers.ModelSerializer):
     profile_pic = serializers.SerializerMethodField()
 
@@ -109,12 +117,4 @@ class UpdateUserSerializer(serializers.ModelSerializer):
             "last_name",
             "email",
             "profile_pic",
-        )
-
-class DeactivateUserSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = User
-        fields = (
-            "is_active",
         )

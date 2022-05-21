@@ -1,0 +1,5 @@
+2022-01-18 18:31:09,424 ERROR rest_utils.py:build_response:60  Response: 400 Failed {'non_field_errors': ['Failed']} None
+2022-01-18 18:31:09,428 DEBUG rest_utils.py:build_response:77  Response: 200 OK 400 Failed {'non_field_errors': ['Failed']} None
+2022-01-18 18:54:17,986 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 success None None
+2022-01-18 18:55:16,935 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 success None None
+2022-01-18 18:55:36,670 DEBUG rest_utils.py:build_response:77  Response: 200 OK 200 success None None

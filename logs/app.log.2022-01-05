@@ -1,0 +1,14 @@
+2022-01-05 18:45:43,178 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ['User matching query does not exist.']} None
+2022-01-05 18:45:43,179 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ['User matching query does not exist.']} None
+2022-01-05 18:47:34,822 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-05 18:48:13,066 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Successfully Login None None
+2022-01-05 18:49:42,315 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Deactivated None None
+2022-01-05 19:00:25,569 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User OTP successfully send None None
+2022-01-05 19:00:58,030 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Successfully Login None None
+2022-01-05 19:01:29,171 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. "]} None
+2022-01-05 19:01:29,171 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. "]} None
+2022-01-05 19:02:07,151 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["'DeactivateUserSerializer' object has no attribute 'commit'"]} None
+2022-01-05 19:02:07,151 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["'DeactivateUserSerializer' object has no attribute 'commit'"]} None
+2022-01-05 19:02:28,593 ERROR rest_utils.py:build_response:61  Response: 500 Internal server error {'non_field_errors': ["You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. "]} None
+2022-01-05 19:02:28,593 DEBUG rest_utils.py:build_response:78  Response: 200 OK 500 Internal server error {'non_field_errors': ["You cannot call `.save()` after accessing `serializer.data`.If you need to access data before committing to the database then inspect 'serializer.validated_data' instead. "]} None
+2022-01-05 19:02:43,340 DEBUG rest_utils.py:build_response:78  Response: 200 OK 200 User Deactivated None None

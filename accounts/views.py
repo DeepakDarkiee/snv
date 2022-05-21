@@ -1,22 +1,23 @@
-import jwt
-from django.conf import settings
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from django.utils.encoding import DjangoUnicodeDecodeError, smart_str
-from django.utils.http import urlsafe_base64_decode
-from drf_yasg import openapi
-from drf_yasg.utils import swagger_auto_schema, swagger_serializer_method
+from drf_yasg.utils import swagger_serializer_method
 from rest_framework import generics, status
-from rest_framework.decorators import api_view
 from rest_framework.parsers import MultiPartParser
 from rest_framework.permissions import IsAuthenticated
-from rest_framework.response import Response
 from snv.common import app_logger, rest_utils
-from .utils import create_user,user_message_send
+
 from accounts.models import User
+from accounts.permissions import IsLogin
+from accounts.serializers import (
+    LoginSerializer,
+    RegisterSerializer,
+    UpdateUserSerializer,
+    UserSendOptSerializer,
+)
+
+from .utils import create_user, user_message_send
+
 logger = app_logger.createLogger("app")
 
 # Create your views here.
-from accounts.serializers import RegisterSerializer,UserSendOptSerializer,LoginSerializer,UpdateUserSerializer,DeactivateUserSerializer
 
 
 class SendUserOtp(generics.GenericAPIView):
@@ -50,6 +51,8 @@ class SendUserOtp(generics.GenericAPIView):
             return rest_utils.build_response(
                 status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
             )
+
+
 class RegisterView(generics.GenericAPIView):
     serializer_class = RegisterSerializer
 
@@ -85,7 +88,6 @@ class RegisterView(generics.GenericAPIView):
             return rest_utils.build_response(
                 status.HTTP_500_INTERNAL_SERVER_ERROR, message, data=None, errors=str(e)
             )
-
 
 
 class LoginAPIView(generics.GenericAPIView):
@@ -151,28 +153,25 @@ class UserProfileUpdate(generics.GenericAPIView):
 
 class DeactivateUserAccount(generics.GenericAPIView):
 
-    permission_classes = (IsAuthenticated,)
-    serializer_class = DeactivateUserSerializer
+    permission_classes = (IsLogin,)
 
-    @swagger_serializer_method(serializer_or_field=DeactivateUserSerializer)
     def put(self, request, format=None):
         try:
-            serializer = self.serializer_class(request.user, data=self.request.data)
-            if serializer.is_valid():
-                serializer.save()
-                return rest_utils.build_response(
-                    status.HTTP_200_OK,
-                    "User Deactivated",
-                    data=serializer.data,
-                    errors=None,
-                )
-            else:
-                return rest_utils.build_response(
-                    status.HTTP_400_BAD_REQUEST,
-                    rest_utils.HTTP_REST_MESSAGES["400"],
-                    data=None,
-                    errors=serializer.errors,
-                )
+            user = User.objects.get(id=request.user.id)
+            user.is_active = False
+            user.save()
+            return rest_utils.build_response(
+                status.HTTP_200_OK,
+                "User Deactivated",
+                errors=None,
+            )
+            # else:
+            #     return rest_utils.build_response(
+            #         status.HTTP_400_BAD_REQUEST,
+            #         rest_utils.HTTP_REST_MESSAGES["400"],
+            #         data=None,
+            #         errors=serializer.errors,
+            #     )
 
         except Exception as e:
             message = rest_utils.HTTP_REST_MESSAGES["500"]
