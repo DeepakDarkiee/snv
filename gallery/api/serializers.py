@@ -1,7 +1,8 @@
 import logging
-from rest_framework import serializers
-from ..models import Gallery, Image
 
+from rest_framework import serializers
+
+from ..models import Gallery, Image
 
 logger = logging.getLogger(__name__)
 
@@ -69,7 +70,7 @@ class GalleryDetailSerializer(serializers.ModelSerializer):
         return serializer.data
 
 
-class ImagePreviewSerializer(serializers.Serializer):
+class   ImagePreviewSerializer(serializers.Serializer):
     x_size = serializers.IntegerField(min_value=0)
     y_size = serializers.IntegerField(min_value=0)
 
