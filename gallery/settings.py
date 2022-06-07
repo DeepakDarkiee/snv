@@ -3,6 +3,9 @@ from django.conf import settings
 
 GALLERIES_SUBDIRECTORY = getattr(settings, 'GALLERIES_SUBDIRECTORY', 'galleries')
 
+ALBUM_SUBDIRECTORY = getattr(settings, 'ALBUM_SUBDIRECTORY', 'albums')
+
+
 THUMBNAILS_SUBDIRECTORY = getattr(settings, 'THUMBNAILS_SUBDIRECTORY', 'thumbnails')
 
 FACEBOOK_AUTHORIZATION_BASE_URL = getattr(

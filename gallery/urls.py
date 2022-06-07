@@ -1,6 +1,8 @@
 from django.urls import path
 from rest_framework.schemas import get_schema_view
 
+from gallery.api.views import AlbumDetailView, AlbumListView, AlbumSharingView
+
 from .api import (
     GalleryDetailView,
     GalleryListView,
@@ -16,6 +18,11 @@ urlpatterns = [
     # path('gallery/', gallery_list_view),
     path("gallery/", GalleryListView.as_view()),
     path("gallery/<str:path>", GalleryDetailView.as_view()),
+    path("album/", AlbumListView.as_view()),
+    path("album/<int:id>",AlbumDetailView.as_view()),
+    path("album_sharing/<int:id>",AlbumSharingView.as_view()),
+
+
     # Gallery detail denpoint: GET, DELETE, POST
     # path("gallery/<str:path>", gallery_detail_view),
     # Image detail endpoint: DELETE, GET
