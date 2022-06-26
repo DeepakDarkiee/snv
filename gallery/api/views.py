@@ -63,6 +63,7 @@ def get_image(gallery_path, image_path):
 
 class GalleryListView(generics.GenericAPIView):
     permission_classes = [IsAuthenticated]
+    
     serializer_class = GallerySerializer
     """
     List all snippets, or create a new snippet.
@@ -187,7 +188,6 @@ class ImagePreviewView(generics.GenericAPIView):
                 )
             )
         )
-
         serializer = ImagePreviewSerializer(data={"x_size": x_size, "y_size": y_size})
         if serializer.is_valid():
             image = get_image(gallery_path, image_path)
