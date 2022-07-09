@@ -160,7 +160,7 @@ class Image(models.Model):
         auto_now=True,
         help_text=_('Timestamp of last modification.'),
     )
-
+    user = models.ForeignKey(User,on_delete=models.CASCADE,related_name='user_image',default=1)
     class Meta:
         verbose_name = _('Image')
         verbose_name_plural = _('Images')
@@ -174,20 +174,19 @@ class Image(models.Model):
         Fullpath of the image for access image detail in URL.  It is composed
         by gallery path and the image filename.
         """
-        return '{}/{}'.format(self.gallery.path, self.path)
+        return '/media/galleries/{}/{}'.format(self.gallery.path, self.path)
 
     @staticmethod
-    def create_from_file(gallery, file, fb_user):
+    def create_from_file(gallery, file, user):
         """
         Cretes `Image` instance from the file (Django `File` object). Parses
         and generates `name` and assigns image to gallery.
         """
         filename, extension = os.path.splitext(file.name)
-
         # path composed from name, FB user ID and extension
-        new_filename = '{filename}-{fb_user_id}{extension}'.format(
+        new_filename = '{filename}-{user}{extension}'.format(
             filename=filename, 
-            fb_user_id=fb_user.fb_id,
+            user=user.id,
             extension=extension
         )
 

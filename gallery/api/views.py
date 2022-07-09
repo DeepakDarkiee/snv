@@ -79,7 +79,7 @@ class GalleryListView(generics.GenericAPIView):
         # logger.debug(request.user)
         data = request.data
         
-        serializer = self.serializer_class(data=data,)
+        serializer = self.serializer_class(data=data)
         # serializer = GallerySerializer(data=request.data)
         if serializer.is_valid():
             serializer.save(user=request.user)
@@ -91,22 +91,23 @@ class GalleryListView(generics.GenericAPIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class GalleryDetailView(generics.GenericAPIView):
-    # permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
     serializer_class = GalleryDetailSerializer
     """
     List all snippets, or create a new snippet.
     """
 
-    def get(self, request, path, format=None):
+    def get(self, request, format=None):
+        path = Gallery.objects.get(user=request.user).path
 
         gallery = get_gallery(path)
         serializer = GalleryDetailSerializer(gallery)
         return Response(serializer.data)
     
-    def post(self, request, path, format=None):
+    def post(self, request, format=None):
         logger.debug(request.user)
         success_response = {"uploaded": [], "errors": []}
-
+        path = Gallery.objects.get(user=request.user).path
         # find galery
         gallery = get_gallery(path)
 
@@ -114,29 +115,29 @@ class GalleryDetailView(generics.GenericAPIView):
         if not request.FILES:
             return Response({}, status=status.HTTP_400_BAD_REQUEST)
 
-        try:
-            for key, val in request.FILES.items():
-                image = Image.create_from_file(gallery, val, request.user)
-                serializer = ImageUploadSerializer(data=image)
-                if serializer.is_valid():
-                    img = serializer.save()
-                    success_response["uploaded"].append(
-                        {
-                            "name": img.name,
-                            "path": img.path,
-                            "fullpath": img.fullpath,
-                            "modified": img.modified,
-                        }
-                    )
-                else:
-                    success_response["errors"].append(
-                        {"name": val.name, "error": serializer.errors}
-                    )
+        # try:
+        for key, val in request.FILES.items():
+            image = Image.create_from_file(gallery, val, request.user)
+            serializer = ImageUploadSerializer(data=image)
+            if serializer.is_valid():
+                img = serializer.save()
+                success_response["uploaded"].append(
+                    {
+                        "name": img.name,
+                        "path": img.path,
+                        "fullpath": img.fullpath,
+                        "modified": img.modified,
+                    }
+                )
+            else:
+                success_response["errors"].append(
+                    {"name": val.name, "error": serializer.errors}
+                )
 
-            return Response(success_response, status=status.HTTP_200_OK)
-        except Exception as e:
-            logger.error(e)
-            raise APIException()
+        return Response(success_response, status=status.HTTP_200_OK)
+        # except Exception as e:
+        #     logger.error(e)
+        #     raise APIException()
 
     def delete(self, request, path, format=None):
         gallery = get_gallery(path)

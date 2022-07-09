@@ -17,7 +17,7 @@ urlpatterns = [
     # Gallery list endpoint: GET, POST
     # path('gallery/', gallery_list_view),
     path("gallery/", GalleryListView.as_view()),
-    path("gallery/<str:path>", GalleryDetailView.as_view()),
+    path("gallery/detail/", GalleryDetailView.as_view()),
     path("album/", AlbumListView.as_view()),
     path("album/<int:id>",AlbumDetailView.as_view()),
     path("album_sharing/<int:id>",AlbumSharingView.as_view()),
